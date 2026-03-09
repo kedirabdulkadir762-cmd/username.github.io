@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdulkadir Math Academy</title>
 
 <style>
@@ -11,42 +12,30 @@ margin:0;
 background:#0f172a;
 color:white;
 text-align:center;
+font-size:18px;
 }
 
-/* math animation background */
-
-.mathbg span{
-position:fixed;
-font-size:25px;
-color:#38bdf8;
-animation:float 10s linear infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(100vh);}
-100%{transform:translateY(-10vh);}
-}
-
-/* header */
+/* HEADER */
 
 header{
-background:#1e3a8a;
-padding:20px;
+background:#1e40af;
+padding:25px;
 }
 
 header img{
-width:120px;
+width:150px;
 }
 
-/* menu */
+/* MENU */
 
 .menu button{
-padding:10px 20px;
-margin:5px;
+padding:12px 22px;
+margin:6px;
 border:none;
 border-radius:8px;
 background:#3b82f6;
 color:white;
+font-size:17px;
 cursor:pointer;
 }
 
@@ -54,13 +43,16 @@ cursor:pointer;
 background:#60a5fa;
 }
 
-/* language */
+/* LANGUAGE */
 
-.language{
-margin:15px;
+.language select{
+padding:8px;
+font-size:16px;
+border-radius:6px;
+margin-top:10px;
 }
 
-/* course cards */
+/* COURSE CARDS */
 
 .course-container{
 display:flex;
@@ -74,6 +66,7 @@ padding:20px;
 margin:10px;
 border-radius:10px;
 width:120px;
+font-size:18px;
 cursor:pointer;
 }
 
@@ -82,57 +75,72 @@ background:#3b82f6;
 transform:scale(1.1);
 }
 
-/* about */
+/* ABOUT */
 
 .about img{
 width:200px;
 border-radius:50%;
+margin-top:10px;
 }
 
-/* download */
+/* DOWNLOAD BUTTONS */
 
 .download button{
-padding:10px 20px;
+padding:12px 20px;
 margin:10px;
 background:#22c55e;
 border:none;
-color:white;
 border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
-/* contact */
+/* CONTACT BUTTONS */
 
-.contact{
-background:#1e293b;
-padding:30px;
+.contact button{
+display:block;
+margin:10px auto;
+padding:12px 25px;
+font-size:17px;
+border:none;
+border-radius:8px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
 }
 
-/* form */
+/* FORM */
 
 form input{
-padding:10px;
-margin:5px;
+width:250px;
+padding:12px;
+margin:6px;
+border-radius:6px;
+border:none;
+color:black;
+font-size:16px;
 }
 
 form button{
-padding:10px 20px;
+padding:12px 25px;
 background:#3b82f6;
 border:none;
-color:white;
-}
-
-/* navigation */
-
-.navbtn button{
-padding:10px 20px;
-margin:10px;
-background:#f59e0b;
-border:none;
-color:white;
 border-radius:6px;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
-/* floating whatsapp */
+/* FOOTER */
+
+footer{
+background:#1e40af;
+padding:15px;
+margin-top:40px;
+}
+
+/* FLOATING WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -142,61 +150,47 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-text-decoration:none;
 font-size:20px;
+text-decoration:none;
 }
 
 </style>
+
 </head>
 
 <body>
-
-<!-- 9 Math animation background -->
-
-<div class="mathbg">
-<span style="left:10%">π</span>
-<span style="left:20%">+</span>
-<span style="left:30%">√</span>
-<span style="left:40%">∑</span>
-<span style="left:50%">x²</span>
-<span style="left:60%">÷</span>
-<span style="left:70%">∞</span>
-</div>
-
-<!-- 1 Logo -->
 
 <header>
 
 <img src="logo.png">
 
-<h1>Abdulkadir Math Academy</h1>
-
-<!-- 2 Menu -->
+<h1 id="title">Abdulkadir Math Academy</h1>
 
 <div class="menu">
-<button onclick="scrollToSection('home')">Home</button>
 <button onclick="scrollToSection('courses')">Courses</button>
 <button onclick="scrollToSection('about')">About</button>
 <button onclick="scrollToSection('contact')">Contact</button>
 </div>
 
-</header>
-
-<!-- 3 Language -->
-
 <div class="language">
-<select>
-<option>English</option>
-<option>Afaan Oromoo</option>
-<option>Amharic</option>
+
+<select onchange="changeLanguage(this.value)">
+
+<option value="en">English</option>
+<option value="or">Afaan Oromoo</option>
+<option value="am">Amharic</option>
+
 </select>
+
 </div>
 
-<!-- 4 Courses -->
+</header>
+
+<!-- COURSES -->
 
 <section id="courses">
 
-<h2>Courses (Grade 5-12)</h2>
+<h2 id="coursetitle">Courses (Grade 5-12)</h2>
 
 <div class="course-container">
 
@@ -213,7 +207,7 @@ font-size:20px;
 
 </section>
 
-<!-- 8 Video & Note download -->
+<!-- DOWNLOAD -->
 
 <section class="download">
 
@@ -224,28 +218,22 @@ font-size:20px;
 
 </section>
 
-<!-- 5 About -->
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
-<h2>About Me</h2>
+<h2 id="abouttitle">About Me</h2>
 
 <img src="Abduu.jpeg">
 
-<p>
-My name is Abdulkadir. I teach Mathematics for Grade 5-12 students.
+<p id="abouttext">
+My name is Abdulkadir. I am a Mathematics teacher.
+This website helps students from Grade 5-12 learn mathematics easily.
 </p>
-<p>
-Maqaan koo Abdulkadir dha. Ani barsiisaa herregaa (Mathematics Teacher) dha.
-Website kana kan ijaare barattootaaf barnoota math salphaa fi hubatamaa
-ta'e qooduuf. As irratti video barnoota, notes fi leenjii herregaa
-garaagaraa argachuu dandeessa.
-</p>
-  
 
 </section>
 
-<!-- 11 Student registration -->
+<!-- REGISTRATION -->
 
 <section>
 
@@ -253,9 +241,17 @@ garaagaraa argachuu dandeessa.
 
 <form>
 
-<input type="text" placeholder="Name"><br>
-<input type="text" placeholder="Grade"><br>
-<input type="text" placeholder="Phone"><br>
+<input type="text" placeholder="Name">
+
+<br>
+
+<input type="text" placeholder="Grade">
+
+<br>
+
+<input type="text" placeholder="Phone">
+
+<br>
 
 <button>Register</button>
 
@@ -263,30 +259,39 @@ garaagaraa argachuu dandeessa.
 
 </section>
 
-<!-- 6 Contact -->
+<!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section id="contact">
 
-<h2>Contact Us</h2>
+<h2 id="contacttitle">Contact Us</h2>
 
-<p>Telegram: @abduke001</p>
-<p>WhatsApp: 0904943815</p>
-<p>Email: kedirabdulkadir762@gmail.com</p>
-<p>Phone: 0904943815 / 0973349001</p>
+<div class="contact">
 
-</section>
+<button onclick="window.open('https://t.me/abduke001')">
+Telegram
+</button>
 
-<!-- 7 Back & Next -->
+<button onclick="window.open('https://wa.me/251904943815')">
+WhatsApp
+</button>
 
-<div class="navbtn">
+<button onclick="window.location='mailto:kedirabdulkadir762@gmail.com'">
+Email
+</button>
 
-<button onclick="history.back()">Back</button>
-
-<button onclick="window.scrollTo(0,0)">Next</button>
+<button>
+Phone: 0904943815 / 0973349001
+</button>
 
 </div>
 
-<!-- 12 Floating whatsapp -->
+</section>
+
+<footer>
+
+<p>© 2025 Abdulkadir Math Academy</p>
+
+</footer>
 
 <a class="whatsapp" href="https://wa.me/251904943815">💬</a>
 
@@ -296,7 +301,49 @@ function scrollToSection(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
+/* LANGUAGE SYSTEM */
+
+function changeLanguage(lang){
+
+if(lang=="or"){
+
+document.getElementById("title").innerText="Abdulkadir Math Academy";
+document.getElementById("coursetitle").innerText="Koorsiiwwan (Kutaa 5-12)";
+document.getElementById("abouttitle").innerText="Waa'ee Koo";
+document.getElementById("abouttext").innerText=
+"Maqaan koo Abdulkadir dha. Ani barsiisaa herregaa dha. Website kun barattoota kutaa 5 hanga 12 herrega salphaatti barachuuf gargaara.";
+document.getElementById("contacttitle").innerText="Nu Qunnamaa";
+
+}
+
+else if(lang=="am"){
+
+document.getElementById("title").innerText="Abdulkadir Math Academy";
+document.getElementById("coursetitle").innerText="ኮርሶች (ክፍል 5-12)";
+document.getElementById("abouttitle").innerText="ስለ እኔ";
+document.getElementById("abouttext").innerText=
+"ስሜ አብዱልቃድር ነው። የሂሳብ መምህር ነኝ። ይህ ድህረ ገጽ ተማሪዎችን ከ5 እስከ 12 ክፍል ሂሳብ ቀላል እንዲሆን ይረዳል።";
+document.getElementById("contacttitle").innerText="አግኙን";
+
+}
+
+else{
+
+document.getElementById("title").innerText="Abdulkadir Math Academy";
+document.getElementById("coursetitle").innerText="Courses (Grade 5-12)";
+document.getElementById("abouttitle").innerText="About Me";
+document.getElementById("abouttext").innerText=
+"My name is Abdulkadir. I am a Mathematics teacher. This website helps students from Grade 5-12 learn mathematics easily.";
+document.getElementById("contacttitle").innerText="Contact Us";
+
+}
+
+}
+
 </script>
 
 </body>
-</html>
+  </html>
+
+
+
