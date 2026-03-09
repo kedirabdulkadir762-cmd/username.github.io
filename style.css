@@ -129,3 +129,50 @@ from{opacity:0;transform:translateY(20px);}
 to{opacity:1;transform:translateY(0);}
 
   }
+/* COURSES SECTION */
+
+.courses{
+
+padding:60px 20px;
+background:#0f2027;
+
+}
+
+.section-title{
+
+font-size:32px;
+margin-bottom:30px;
+
+}
+
+/* COURSE GRID */
+
+.course-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+
+}
+
+/* CARD */
+
+.course-card{
+
+background:#3a7bd5;
+padding:30px;
+border-radius:12px;
+font-size:20px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+/* HOVER EFFECT */
+
+.course-card:hover{
+
+background:#5aa0ff;
+transform:scale(1.08);
+
+}
