@@ -4,20 +4,39 @@
 <title>Abdulkadir Math Academy</title>
 
 <style>
+
 body{
-font-family: Arial;
+font-family:Arial;
+margin:0;
 background:#f2f2f2;
 text-align:center;
 }
 
 header{
-background:#0d6efd;
+background:#1e73e8;
 color:white;
 padding:20px;
 }
 
-h1{
-margin:0;
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav{
+background:#0d47a1;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
 }
 
 .section{
@@ -27,15 +46,35 @@ padding:20px;
 border-radius:10px;
 }
 
-ul{
-list-style:none;
-padding:0;
+.button{
+display:inline-block;
+padding:12px 18px;
+margin:8px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
 }
 
-li{
-padding:8px;
-font-size:18px;
+.whatsapp{
+background:#25D366;
 }
+
+.telegram{
+background:#0088cc;
+}
+
+.email{
+background:#e53935;
+}
+
+.course-box{
+background:#eef3ff;
+padding:15px;
+margin:10px;
+border-radius:8px;
+}
+
 </style>
 
 </head>
@@ -43,20 +82,93 @@ font-size:18px;
 <body>
 
 <header>
-<h1>Abdulkadir Math Academy</h1>
+
+<div class="logo">📘 Abdulkadir Math Academy</div>
 <p>Baga gara website keenya dhuftan</p>
+
 </header>
 
-<div class="section">
-<h2>Barnoota</h2>
+<nav>
 
-<ul>
-<li>Algebra</li>
-<li>Geometry</li>
-<li>Calculus</li>
-</ul>
+<a href="#">Home</a>
+<a href="#course">Courses</a>
+<a href="#videos">Videos</a>
+<a href="#notes">Notes</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<div class="section" id="course">
+
+<h2>Math Courses</h2>
+
+<div class="course-box">Grade 5 Mathematics</div>
+<div class="course-box">Grade 6 Mathematics</div>
+<div class="course-box">Grade 7 Mathematics</div>
+<div class="course-box">Grade 8 Mathematics</div>
+<div class="course-box">Grade 9 Mathematics</div>
+<div class="course-box">Grade 10 Mathematics</div>
+<div class="course-box">Grade 11 Mathematics</div>
+<div class="course-box">Grade 12 Mathematics</div>
+
+</div>
+
+
+<div class="section" id="videos">
+
+<h2>Math Video Lessons</h2>
+
+<iframe width="300" height="200"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+</iframe>
+
+</div>
+
+
+<div class="section" id="notes">
+
+<h2>Download Student Notes</h2>
+
+<a href="notes.pdf" download class="button email">
+Download Notes
+</a>
+
+</div>
+
+
+<div class="section" id="about">
+
+<h2>About Us</h2>
+
+<p>
+Maqaan koo Abdulkadir dha. Ani barsiisaa herregaa (Mathematics Teacher) dha.
+Website kana kan ijaare barattootaaf barnoota math salphaa fi hubatamaa
+ta'e qooduuf. As irratti video barnoota, notes fi leenjii herregaa
+garaagaraa argachuu dandeessu.
+</p>
+
+</div>
+
+
+<div class="section" id="contact">
+
+<h2>Contact Us</h2>
+
+<a href="https://wa.me/251900000000" class="button whatsapp">
+WhatsApp
+</a>
+
+<a href="https://t.me/username" class="button telegram">
+Telegram
+</a>
+
+<a href="mailto:abdulkadirmath@gmail.com" class="button email">
+Email
+</a>
 
 </div>
 
 </body>
-</html>
+  </html>
