@@ -27,4 +27,12 @@ document.querySelector(".site-name").innerText="Abdulkadir Math Academy"
 }
 
 }
+document.querySelector(".register-form").addEventListener("submit",function(e){
 
+e.preventDefault();
+
+alert("Registration Successful! Please proceed to payment.");
+
+scrollToSection("payment");
+
+});
