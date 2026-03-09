@@ -27,3 +27,4 @@ document.querySelector(".site-name").innerText="Abdulkadir Math Academy"
 }
 
 }
+
