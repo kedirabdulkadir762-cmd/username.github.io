@@ -1,1 +1,72 @@
+body{
 
+margin:0;
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+
+}
+
+/* HEADER */
+
+header{
+
+background:#1e3c72;
+padding:15px;
+
+}
+
+.header-container{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+
+}
+
+/* LOGO */
+
+.logo{
+
+width:70px;
+
+}
+
+/* SITE NAME */
+
+.site-name{
+
+font-size:22px;
+
+}
+
+/* MENU */
+
+.menu button{
+
+padding:10px 18px;
+margin:5px;
+border:none;
+border-radius:6px;
+background:#3a7bd5;
+color:white;
+cursor:pointer;
+
+}
+
+.menu button:hover{
+
+background:#5aa0ff;
+
+}
+
+/* LANGUAGE */
+
+.language{
+
+padding:6px;
+border-radius:6px;
+
+}
