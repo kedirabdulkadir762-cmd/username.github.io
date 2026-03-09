@@ -70,3 +70,62 @@ padding:6px;
 border-radius:6px;
 
 }
+/* HERO SECTION */
+
+.hero{
+
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+}
+
+.hero-title{
+
+font-size:40px;
+margin-bottom:15px;
+animation:fadeIn 2s;
+
+}
+
+.hero-text{
+
+font-size:20px;
+margin-bottom:25px;
+opacity:0.9;
+
+}
+
+.start-btn{
+
+padding:14px 28px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#3a7bd5;
+color:white;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+.start-btn:hover{
+
+background:#5aa0ff;
+transform:scale(1.1);
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+
+  }
