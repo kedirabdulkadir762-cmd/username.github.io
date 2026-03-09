@@ -36,3 +36,12 @@ alert("Registration Successful! Please proceed to payment.");
 scrollToSection("payment");
 
 });
+document.querySelectorAll(".payment-card").forEach(card => {
+
+card.addEventListener("click", function(){
+
+alert("Please send payment and confirm to access course materials.");
+
+});
+
+});
