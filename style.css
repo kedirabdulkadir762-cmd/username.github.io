@@ -132,26 +132,24 @@ to{opacity:1;transform:translateY(0);}
 /* COURSES SECTION */
 
 .courses{
-
 padding:60px 20px;
-background:#0f2027;
-
+background:#0b1f26;
 }
 
 .section-title{
-
 font-size:32px;
 margin-bottom:30px;
-
 }
 
-/* COURSE GRID */
+/* GRID */
 
 .course-container{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:20px;
+max-width:500px;
+margin:auto;
 
 }
 
@@ -160,19 +158,22 @@ gap:20px;
 .course-card{
 
 background:#3a7bd5;
-padding:30px;
+padding:25px;
 border-radius:12px;
 font-size:20px;
+font-weight:bold;
+text-align:center;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 
 .course-card:hover{
 
 background:#5aa0ff;
-transform:scale(1.08);
+transform:translateY(-5px);
 
 }
