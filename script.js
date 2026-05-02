@@ -45,3 +45,17 @@ alert("Please send payment and confirm to access course materials.");
 });
 
 });
+var message = "";
+
+if(score == 5){
+message = "Excellent! 🎉";
+}
+else if(score >=3){
+message = "Good job 👍";
+}
+else{
+message = "Keep practicing 💪";
+}
+
+document.getElementById("score").innerHTML =
+"Your Score: " + score + " / 5 <br>" + message;
