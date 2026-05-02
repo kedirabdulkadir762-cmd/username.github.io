@@ -78,3 +78,94 @@ document.getElementById("result").innerHTML = "Try again ❌";
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math Quiz</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#0b2c33;
+color:white;
+padding:20px;
+}
+
+.quiz-box{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+max-width:350px;
+margin:auto;
+}
+
+input{
+margin:10px;
+padding:8px;
+width:80%;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:5px;
+background:#3b82f6;
+color:white;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Math Quiz</h1>
+
+<div class="quiz-box">
+
+<p>1. 25 + 15 = ?</p>
+<input type="number" id="q1">
+
+<p>2. 40 ÷ 5 = ?</p>
+<input type="number" id="q2">
+
+<p>3. 12 × 3 = ?</p>
+<input type="number" id="q3">
+
+<p>4. 50 - 20 = ?</p>
+<input type="number" id="q4">
+
+<p>5. 9 + 11 = ?</p>
+<input type="number" id="q5">
+
+<br>
+
+<button onclick="checkScore()">Submit</button>
+
+<h2 id="score"></h2>
+
+</div>
+
+<script>
+
+function checkScore(){
+
+var score = 0;
+
+if(document.getElementById("q1").value == 40){ score++; }
+if(document.getElementById("q2").value == 8){ score++; }
+if(document.getElementById("q3").value == 36){ score++; }
+if(document.getElementById("q4").value == 30){ score++; }
+if(document.getElementById("q5").value == 20){ score++; }
+
+document.getElementById("score").innerHTML =
+"Your Score: " + score + " / 5";
+
+}
+
+</script>
+
+</body>
+</html>
