@@ -59,3 +59,15 @@ message = "Keep practicing 💪";
 
 document.getElementById("score").innerHTML =
 "Your Score: " + score + " / 5 <br>" + message;
+<script>
+const langSelect = document.getElementById("langSelect");
+
+langSelect.addEventListener("change", function(){
+  const lang = this.value;
+
+  // Find all elements with data-en attribute
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = el.getAttribute(`data-${lang}`);
+  });
+});
+</script>
